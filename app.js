@@ -21,8 +21,7 @@ const degree = "B.Com. Semester - 4 (April - 2024)";
     // )
     const browser = await puppeteer.launch({
         headless: true,
-
-        // executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', // Path to your Chrome
+        executablePath: '/path/to/chromium',
         defaultViewport: null,
         slowMo: true,
         args: ["--start-maximized"]
