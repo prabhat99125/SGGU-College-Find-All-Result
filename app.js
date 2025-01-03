@@ -21,7 +21,7 @@ const degree = "B.Com. Semester - 4 (April - 2024)";
     // )
     const browser = await puppeteer.launch({
         headless: true,
-        executablePath: '/path/to/chromium',
+        // executablePath: '/path/to/chromium',
         defaultViewport: null,
         slowMo: true,
         args: ["--start-maximized"]
