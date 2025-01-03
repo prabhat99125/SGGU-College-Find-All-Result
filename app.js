@@ -24,7 +24,15 @@ const degree = "B.Com. Semester - 4 (April - 2024)";
         // executablePath: '/path/to/chromium',
         defaultViewport: null,
         slowMo: true,
-        args: ["--start-maximized"]
+        args: [
+            '--no-sandbox', // Disable the sandbox for compatibility on restricted servers
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage', // Prevent crashes due to low shared memory
+            '--disable-gpu', // Disable GPU rendering
+            '--no-first-run',
+            '--no-zygote',
+            '--single-process', // Only one process
+        ],
     });
     try {
         const [page] = await browser.pages();
